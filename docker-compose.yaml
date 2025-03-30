@@ -1,0 +1,15 @@
+services:
+  # voting-bot:
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    # depends_on:
+    #   - mattermost
+
+  tarantool:
+    build: ./tarantool
+    restart: always
+    ports:
+      - 3301:3301
+
+  
